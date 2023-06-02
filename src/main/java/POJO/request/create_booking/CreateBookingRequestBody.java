@@ -41,6 +41,31 @@ public class CreateBookingRequestBody {
                 this.bookingdates.setCheckout(BookingDetails.UPDATE_CHECKOUT);
                 this.additionalneeds = BookingDetails.UPDATE_ADDITIONAL_NEEDS;
             }
+            case READ -> {
+                this.firstname = BookingDetails.LIST_FIRST_NAME;
+                this.lastname = BookingDetails.LIST_LAST_NAME;
+                this.totalprice = Integer.parseInt(BookingDetails.LIST_PRICE);
+                this.depositpaid = true;
+                this.bookingdates = new BookingDates(
+                        BookingDetails.LIST_CHECK_IN,
+                        BookingDetails.LIST_CHECKOUT);
+                this.bookingdates.setCheckin(BookingDetails.LIST_CHECK_IN);
+                this.bookingdates.setCheckout(BookingDetails.LIST_CHECKOUT);
+                this.additionalneeds = BookingDetails.LIST_ADDITIONAL_NEEDS;
+            }
+            case DELETE -> {
+                this.firstname = BookingDetails.DELETE_FIRST_NAME;
+                this.lastname = BookingDetails.DELETE_LAST_NAME;
+                this.totalprice = Integer.parseInt(BookingDetails.DELETE_PRICE);
+                this.depositpaid = true;
+                this.bookingdates = new BookingDates(
+                        BookingDetails.DELETE_CHECK_IN,
+                        BookingDetails.DELETE_CHECKOUT);
+                this.bookingdates.setCheckin(BookingDetails.DELETE_CHECK_IN);
+                this.bookingdates.setCheckout(BookingDetails.DELETE_CHECKOUT);
+                this.additionalneeds = BookingDetails.DELETE_ADDITIONAL_NEEDS;
+            }
+            default -> throw new RuntimeException("Type not defined correctly");
         }
     }
 }

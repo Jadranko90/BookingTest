@@ -4,5 +4,9 @@ public enum BookingType {
 
     CREATE,
 
-    UPDATE
+    UPDATE,
+
+    READ,
+
+    DELETE
 }
