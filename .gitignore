@@ -17,6 +17,8 @@ target/
 .idea/misc.xml
 .idea/vcs.xml
 
+*.idea
+
 .idea/libraries/
 *.iws
 *.iml
