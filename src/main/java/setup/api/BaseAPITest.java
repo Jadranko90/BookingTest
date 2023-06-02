@@ -28,7 +28,4 @@ public abstract class BaseAPITest {
         this.newBooking = new CreateBookingRequest();
         this.customAssert = new CustomAssert();
     }
-
-
-    DataPreparation dataPreparation = new DataPreparation();
 }
