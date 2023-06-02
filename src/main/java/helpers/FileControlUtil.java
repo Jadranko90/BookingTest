@@ -8,6 +8,8 @@ public class FileControlUtil {
     public static final String ENDPOINTS = "endpoints.properties";
     public static final String USER_DETAILS = "user.properties";
 
+    public static final String BOOKING = "booking.properties";
+
     public FileControlUtil(String file) throws Exception {
         properties = new Properties();
         properties.load(getClass().getResourceAsStream("/" + file));

@@ -15,13 +15,13 @@ public class TokenGenerator {
     public TokenGenerator() {
     }
 
-    public TokenGenerator(String email, String pass) {
-        this.token = accessToken(email, pass);
+    public TokenGenerator(String username, String pass) {
+        this.token = accessToken(username, pass);
     }
 
-    private String accessToken(String email, String pass) {
+    private String accessToken(String username, String pass) {
         LogIn logIn = new LogIn();
-        Response response = logIn.logIn(email, pass);
+        Response response = logIn.logIn(username, pass);
         LogInResponseBody body = response.body().as(LogInResponseBody.class);
 
         return "token=" + body.getToken();
