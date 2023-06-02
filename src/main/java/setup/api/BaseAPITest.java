@@ -1,6 +1,7 @@
 package setup.api;
 
 import POJO.request.create_booking.CreateBookingRequestBody;
+import helpers.CustomAssert;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -18,11 +19,12 @@ public abstract class BaseAPITest {
     protected Response response;
     protected SoftAssert softAssert;
     protected CreateBookingRequest newBooking;
+    protected CustomAssert customAssert;
 
 
     public BaseAPITest() {
-
         this.softAssert = new SoftAssert();
         this.newBooking = new CreateBookingRequest();
+        this.customAssert = new CustomAssert();
     }
 }
