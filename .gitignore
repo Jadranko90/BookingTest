@@ -14,10 +14,10 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/encodings.xml
-.idea/misc.xml
+.idea/**/misc.xml
 .idea/vcs.xml
 
-*.idea
+**.idea
 
 .idea/libraries/
 *.iws
