@@ -13,6 +13,8 @@ public class Endpoints {
         }
     }
 
-    public static final String ENDPOINTS = fileControlURL.getValue("ENDPOINTS");
+    public static final String BASE_URI = fileControlURL.getValue("BASE_URL");
     public static final String AUTH = fileControlURL.getValue("AUTH");
+
+
 }
