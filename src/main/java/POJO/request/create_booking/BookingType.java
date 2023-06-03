@@ -8,5 +8,7 @@ public enum BookingType {
 
     READ,
 
-    DELETE
+    DELETE,
+
+    CHANGED
 }

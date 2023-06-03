@@ -65,6 +65,18 @@ public class CreateBookingRequestBody {
                 this.bookingdates.setCheckout(BookingDetails.DELETE_CHECKOUT);
                 this.additionalneeds = BookingDetails.DELETE_ADDITIONAL_NEEDS;
             }
+            case CHANGED -> {
+                this.firstname = BookingDetails.CHANGED_FIRST_NAME;
+                this.lastname = BookingDetails.CHANGED_LAST_NAME;
+                this.totalprice = Integer.parseInt(BookingDetails.CHANGED_PRICE);
+                this.depositpaid = true;
+                this.bookingdates = new BookingDates(
+                        BookingDetails.CHANGED_CHECK_IN,
+                        BookingDetails.CHANGED_CHECKOUT);
+                this.bookingdates.setCheckin(BookingDetails.CHANGED_CHECK_IN);
+                this.bookingdates.setCheckout(BookingDetails.CHANGED_CHECKOUT);
+                this.additionalneeds = BookingDetails.CHANGED_ADDITIONAL_NEEDS;
+            }
             default -> throw new RuntimeException("Type not defined correctly");
         }
     }

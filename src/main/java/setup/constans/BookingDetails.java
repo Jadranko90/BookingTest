@@ -50,5 +50,15 @@ public class BookingDetails {
     public static final String DELETE_ADDITIONAL_NEEDS = fileControlBooking.getValue(
             "DELETE_ADDITIONAL_NEEDS");
 
+    // Details for changing Booking attributes
+    public static final String CHANGED_FIRST_NAME= fileControlBooking.getValue("CHANGED_FIRST_NAME");
+    public static final String CHANGED_LAST_NAME = fileControlBooking.getValue("CHANGED_LAST_NAME");
+    public static final String CHANGED_PRICE = fileControlBooking.getValue("CHANGED_PRICE");
+    public static final String CHANGED_CHECK_IN = fileControlBooking.getValue("CHANGED_CHECK_IN");
+    public static final String CHANGED_CHECKOUT = fileControlBooking.getValue("CHANGED_CHECKOUT");
+    public static final String CHANGED_ADDITIONAL_NEEDS = fileControlBooking.getValue(
+            "CHANGED_ADDITIONAL_NEEDS");
+
+
 
 }
