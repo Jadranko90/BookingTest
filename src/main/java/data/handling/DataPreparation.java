@@ -45,6 +45,6 @@ public class DataPreparation {
         this.bookingForDeleteId = responseBodyBookingForDelete.getBookingid();
         idList.add(bookingForDeleteId);
 
-        setBookingIdList(idList);
+        this.setBookingIdList(idList);
     }
 }
