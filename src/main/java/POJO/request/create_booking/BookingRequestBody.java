@@ -6,7 +6,7 @@ import setup.constans.BookingDetails;
 
 @Getter
 @Setter
-public class CreateBookingRequestBody {
+public class BookingRequestBody {
     private String firstname;
     private String lastname;
     private int totalprice;
@@ -14,10 +14,8 @@ public class CreateBookingRequestBody {
     private BookingDates bookingdates;
     private String additionalneeds;
 
-    public CreateBookingRequestBody() {
-    }
 
-    public CreateBookingRequestBody(BookingType bookingType) {
+    public BookingRequestBody(BookingType bookingType) {
         switch (bookingType) {
             case CREATE -> {
                 this.firstname = BookingDetails.CREATE_FIRST_NAME;
@@ -42,16 +40,16 @@ public class CreateBookingRequestBody {
                 this.additionalneeds = BookingDetails.UPDATE_ADDITIONAL_NEEDS;
             }
             case READ -> {
-                this.firstname = BookingDetails.LIST_FIRST_NAME;
-                this.lastname = BookingDetails.LIST_LAST_NAME;
-                this.totalprice = Integer.parseInt(BookingDetails.LIST_PRICE);
+                this.firstname = BookingDetails.GET_FIRST_NAME;
+                this.lastname = BookingDetails.GET_LAST_NAME;
+                this.totalprice = Integer.parseInt(BookingDetails.GET_PRICE);
                 this.depositpaid = true;
                 this.bookingdates = new BookingDates(
-                        BookingDetails.LIST_CHECK_IN,
-                        BookingDetails.LIST_CHECKOUT);
-                this.bookingdates.setCheckin(BookingDetails.LIST_CHECK_IN);
-                this.bookingdates.setCheckout(BookingDetails.LIST_CHECKOUT);
-                this.additionalneeds = BookingDetails.LIST_ADDITIONAL_NEEDS;
+                        BookingDetails.GET_CHECK_IN,
+                        BookingDetails.GET_CHECKOUT);
+                this.bookingdates.setCheckin(BookingDetails.GET_CHECK_IN);
+                this.bookingdates.setCheckout(BookingDetails.GET_CHECKOUT);
+                this.additionalneeds = BookingDetails.GET_ADDITIONAL_NEEDS;
             }
             case DELETE -> {
                 this.firstname = BookingDetails.DELETE_FIRST_NAME;

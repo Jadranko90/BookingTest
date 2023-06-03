@@ -1,6 +1,6 @@
 package specification.request;
 
-import POJO.request.create_booking.CreateBookingRequestBody;
+import POJO.request.create_booking.BookingRequestBody;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -11,7 +11,7 @@ import setup.constans.Endpoints;
 
 public class CreateBookingRequest {
 
-    public Response create(CreateBookingRequestBody booking, String token) {
+    public Response create(BookingRequestBody booking, String token) {
         RequestSpecification request = RestAssured
                 .given()
                 .baseUri(Endpoints.BASE_URI)

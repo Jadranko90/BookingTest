@@ -1,6 +1,5 @@
 package specification.request;
 
-import POJO.request.create_booking.CreateBookingRequestBody;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;

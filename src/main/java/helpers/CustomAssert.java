@@ -2,7 +2,6 @@ package helpers;
 
 import POJO.response.create_booking.Booking;
 import POJO.response.create_booking.CreateBookingResponse;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.asserts.SoftAssert;
 import setup.constans.BookingDetails;
@@ -35,13 +34,13 @@ public class CustomAssert {
         softAssert.assertEquals(response.statusCode(), 200,
                 "Status code not 200");
         softAssert.assertEquals(responseBody.getTotalprice(),
-                Integer.parseInt(BookingDetails.LIST_PRICE),
+                Integer.parseInt(BookingDetails.GET_PRICE),
                 "Price not as expected");
-        softAssert.assertEquals(responseBody.getAdditionalneeds(), BookingDetails.LIST_ADDITIONAL_NEEDS,
+        softAssert.assertEquals(responseBody.getAdditionalneeds(), BookingDetails.GET_ADDITIONAL_NEEDS,
                 "Additional needs not as expected");
         softAssert.assertTrue(response.time() < 3000,
                 "Response time longer than 3 seconds");
-        softAssert.assertAll("These are the isses: ");
+        softAssert.assertAll("These are the issues: ");
     }
 
     public void checkIfBookingIsUpdatedCorrectly(Response response) {

@@ -8,9 +8,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import setup.constans.Endpoints;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-
 public class GetSingleBookingRequest {
 
     public Response checkDetails(String token, int bookingId) {

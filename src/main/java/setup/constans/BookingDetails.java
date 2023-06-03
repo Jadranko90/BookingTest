@@ -33,13 +33,13 @@ public class BookingDetails {
             "UPDATE_ADDITIONAL_NEEDS");
 
     // Data for get Users List
-    public static final String LIST_FIRST_NAME= fileControlBooking.getValue("LIST_FIRST_NAME");
-    public static final String LIST_LAST_NAME = fileControlBooking.getValue("LIST_LAST_NAME");
-    public static final String LIST_PRICE = fileControlBooking.getValue("LIST_PRICE");
-    public static final String LIST_CHECK_IN = fileControlBooking.getValue("LIST_CHECK_IN");
-    public static final String LIST_CHECKOUT = fileControlBooking.getValue("LIST_CHECKOUT");
-    public static final String LIST_ADDITIONAL_NEEDS = fileControlBooking.getValue(
-            "LIST_ADDITIONAL_NEEDS");
+    public static final String GET_FIRST_NAME = fileControlBooking.getValue("GET_FIRST_NAME");
+    public static final String GET_LAST_NAME = fileControlBooking.getValue("GET_LAST_NAME");
+    public static final String GET_PRICE = fileControlBooking.getValue("GET_PRICE");
+    public static final String GET_CHECK_IN = fileControlBooking.getValue("GET_CHECK_IN");
+    public static final String GET_CHECKOUT = fileControlBooking.getValue("GET_CHECKOUT");
+    public static final String GET_ADDITIONAL_NEEDS = fileControlBooking.getValue(
+            "GET_ADDITIONAL_NEEDS");
 
     // Data for deleting
     public static final String DELETE_FIRST_NAME= fileControlBooking.getValue("DELETE_FIRST_NAME");
@@ -58,7 +58,5 @@ public class BookingDetails {
     public static final String CHANGED_CHECKOUT = fileControlBooking.getValue("CHANGED_CHECKOUT");
     public static final String CHANGED_ADDITIONAL_NEEDS = fileControlBooking.getValue(
             "CHANGED_ADDITIONAL_NEEDS");
-
-
 
 }

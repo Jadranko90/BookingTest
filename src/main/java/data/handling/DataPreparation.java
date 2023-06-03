@@ -1,7 +1,7 @@
 package data.handling;
 
 import POJO.request.create_booking.BookingType;
-import POJO.request.create_booking.CreateBookingRequestBody;
+import POJO.request.create_booking.BookingRequestBody;
 import POJO.response.create_booking.CreateBookingResponse;
 import io.restassured.response.Response;
 import lombok.Getter;
@@ -19,31 +19,31 @@ public class DataPreparation {
 
     protected Response response;
 
-    public int bookingForUpdateId;
-    public int bookingForGetBooking;
-    public int bookingForDeleteId;
+    public int updateTestId;
+    public int getTestId;
+    public int deleteTestId;
 
     public List<Integer> bookingIdList;
 
     public DataPreparation(String token) {
         List<Integer> idList = new ArrayList<>();
-        CreateBookingRequestBody requestBodyPrepareForUpdate = new CreateBookingRequestBody(BookingType.UPDATE);
+        BookingRequestBody requestBodyPrepareForUpdate = new BookingRequestBody(BookingType.UPDATE);
         response = newBooking.create(requestBodyPrepareForUpdate, token);
         CreateBookingResponse responseBodyBookingForUpdate = response.as(CreateBookingResponse.class);
-        this.bookingForUpdateId = responseBodyBookingForUpdate.getBookingid();
-        idList.add(bookingForUpdateId);
+        this.updateTestId = responseBodyBookingForUpdate.getBookingid();
+        idList.add(updateTestId);
 
-        CreateBookingRequestBody requestBodyPrepareForGetList = new CreateBookingRequestBody(BookingType.READ);
+        BookingRequestBody requestBodyPrepareForGetList = new BookingRequestBody(BookingType.READ);
         response = newBooking.create(requestBodyPrepareForGetList, token);
         CreateBookingResponse responseBodyBookingForRead = response.as(CreateBookingResponse.class);
-        this.bookingForGetBooking = responseBodyBookingForRead.getBookingid();
-        idList.add(bookingForGetBooking);
+        this.getTestId = responseBodyBookingForRead.getBookingid();
+        idList.add(getTestId);
 
-        CreateBookingRequestBody requestBodyPrepareForDelete = new CreateBookingRequestBody(BookingType.DELETE);
+        BookingRequestBody requestBodyPrepareForDelete = new BookingRequestBody(BookingType.DELETE);
         response = newBooking.create(requestBodyPrepareForDelete, token);
         CreateBookingResponse responseBodyBookingForDelete = response.as(CreateBookingResponse.class);
-        this.bookingForDeleteId = responseBodyBookingForDelete.getBookingid();
-        idList.add(bookingForDeleteId);
+        this.deleteTestId = responseBodyBookingForDelete.getBookingid();
+        idList.add(deleteTestId);
 
         this.setBookingIdList(idList);
     }

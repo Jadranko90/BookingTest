@@ -12,9 +12,6 @@ public class TokenGenerator {
 
     private String token;
 
-    public TokenGenerator() {
-    }
-
     public TokenGenerator(String username, String pass) {
         this.token = accessToken(username, pass);
     }
